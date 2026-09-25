@@ -1,6 +1,6 @@
 # User Rules (global)
 
-Paste everything below the line into **Cursor Settings → Rules → User Rules**.
+Paste everything below the line into **Cursor Settings (`Ctrl+Shift+J`) → Rules**, or ask the agent to add it as a user rule for you.
 Cursor adds it to every chat in every project.
 Keep it short: it's paid for on every message. Project detail belongs in each repo's `AGENTS.md`.
 

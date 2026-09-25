@@ -42,5 +42,5 @@ Install-To (Join-Path $HOME '.cursor')
 if ($Claude) { Install-To (Join-Path $HOME '.claude') }
 
 Write-Host ""
-Write-Host "Last step (manual): paste global/USER-RULES.md into Cursor Settings -> Rules -> User Rules."
+Write-Host "Last step: add global/USER-RULES.md as a Cursor user rule (Settings -> Rules, or ask the agent to add it)."
 Write-Host "Then restart Cursor so it picks up the new agents and skills."

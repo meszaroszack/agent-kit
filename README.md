@@ -39,7 +39,7 @@ The "global" folders (`~/.cursor/...`) mean the agents and skills follow you int
    powershell -ExecutionPolicy Bypass -File scripts/install.ps1          # Cursor
    powershell -ExecutionPolicy Bypass -File scripts/install.ps1 -Claude  # Cursor + Claude Code
    ```
-3. **Paste your User Rules:** open `global/USER-RULES.md`, copy everything below the line, and paste it into **Cursor Settings → Rules → User Rules**.
+3. **Add your User Rules:** ask the agent to "add my agent-kit user rules" (it can save them for you), or copy everything below the line in `global/USER-RULES.md` into **Cursor Settings (`Ctrl+Shift+J`) → Rules**.
 4. **Restart Cursor.**
 
 Updating the kit later: edit files here, commit, then re-run `install.ps1`. Every project picks up the change.
