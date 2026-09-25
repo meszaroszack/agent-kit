@@ -1,0 +1,18 @@
+---
+description: Guardrails for high-risk code (auth, money, persistence). Loads when these paths are touched.
+globs: <e.g. src/auth/**, src/engine/**, backend/apollo/signer.py, migrations/**>
+alwaysApply: false
+---
+
+# High-risk code
+
+These paths handle <auth / real money / persisted state>. Before changing behavior here:
+
+- Read `ai/summaries/CRASH-AND-FIX-LOG.md`: past bugs in these files are listed there.
+- Explain the change and its blast radius, and get explicit approval from Zack.
+- Add or update a test that proves the new behavior; never weaken existing ones.
+- Keep paper/sim mode working. Don't expand live behavior silently.
+- Record the change as a DEC entry in `ai/summaries/DECISION-LOG.md`.
+
+<Project-specific rules, e.g.:>
+<- Kalshi signing is RSA-PSS SHA-256, salt length 32, message = timestamp_ms + METHOD + path (no query). Use `<module>`; never re-implement.>
