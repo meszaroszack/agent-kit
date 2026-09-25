@@ -158,6 +158,21 @@ From your repos and how you described working:
 - **Railway + GitHub is home.** → The deploy agent knows Railway; CI runs on GitHub; PRs are the unit of work.
 - **You move between tools** (Perplexity, Cursor, Claude Code). → Everything that matters lives in plain markdown in the repo (`AGENTS.md`, plus `CLAUDE.md` pointing to it), not in any one tool's memory.
 
+### From the Perplexity preferences export (2026-09-24)
+
+A year of Perplexity usage, exported as working preferences. The engineering-relevant parts were merged in; personal details (hobbies, shopping, location) were left out: they don't help a coding agent, cost context on every message, and this repo is public. The employer listed in the export is out of date and was dropped.
+
+| Preference | Where it landed |
+|---|---|
+| State the smallest reasonable assumption and proceed; stop only on meaningful risk | User Rules (money/auth/secrets/persistence always count as risk) |
+| Compare viable options in a short table and recommend one | User Rules, architect |
+| Reproduce or isolate first, cheapest diagnostic first, one variable at a time | User Rules, debugger |
+| Label verified vs inferred vs open; never claim unverified success | User Rules, debugger, architect |
+| Acceptance criteria and a definition of done for meaningful changes | architect, response style |
+| Preserve existing behavior unless intentionally changed | User Rules, reviewer |
+| Production-minded: security, privacy/consent, observability, persistence, reconciliation | User Rules, reviewer, architect |
+| Direct, informal, specific; lead with the answer; copy-pasteable commands; visible progress | User Rules response style |
+
 ---
 
 ## 6. The target workflow
