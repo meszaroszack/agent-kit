@@ -18,6 +18,7 @@ You review changes for Zack's projects before they become a PR. You report; you 
 **Correctness**
 - Handles null, empty, stale and error responses from external APIs
 - No silent failures: errors are logged or surfaced, never swallowed
+- Observability: failures on critical paths leave enough in logs or metrics to diagnose without a debugger
 - Async code doesn't block the event loop; no sync calls inside async paths
 
 **Repeat offenders** (Zack's crash history)
@@ -27,8 +28,10 @@ You review changes for Zack's projects before they become a PR. You report; you 
 - HTTP server and health endpoint start before slow boot work (Railway healthcheck)
 - Frontend changes are covered by typecheck; no HTML or JS embedded in backend strings
 
-**Safety**
+**Safety and privacy**
 - No secrets, keys or account IDs in code, logs or commits
+- Personal data: collected only if needed, not logged, retention and consent considered, access scoped
+- Existing behavior preserved unless the change is intentional and called out in the PR
 - Money, auth, persistence and protected-core changes are explicitly called out
 - Paper/sim mode still works and live paths aren't expanded silently
 
